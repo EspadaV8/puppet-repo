@@ -1,0 +1,50 @@
+[base]
+name=CentOS-$releasever - Base
+#baseurl=file:/repo/centos/$releasever/os/$basearch/
+baseurl=http://puppet/centos/$releasever/os/$basearch/
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+protect=1
+priority=1
+enabled=1
+
+[updates]
+name=CentOS-$releasever - Updates
+#baseurl=file:/repo/centos/$releasever/updates/$basearch/
+baseurl=http://puppet/centos/$releasever/updates/$basearch/
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+protect=1
+priority=1
+enabled=1
+
+[extras]
+name=CentOS-$releasever - Extras
+#baseurl=file:/repo/centos/$releasever/extras/$basearch/
+baseurl=http://puppet/centos/$releasever/extras/$basearch/
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+protect=1
+priority=1
+enabled=1
+
+[centosplus]
+name=CentOS-$releasever - CentOS plus
+#baseurl=file:/repo/centos/$releasever/centosplus/$basearch/
+baseurl=http://puppet/centos/$releasever/centosplus/$basearch/
+exclude=kernel*
+gpgcheck=1
+enabled=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+protect=0
+priority=1
+
+[contrib]
+name=CentOS-$releasever - Crontib
+#baseurl=file:/repo/centos/$releasever/contrib/$basearch/
+baseurl=http://puppet/centos/$releasever/contrib/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+protect=0
+priority=3
